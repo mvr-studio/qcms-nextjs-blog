@@ -1,0 +1,12 @@
+query Posts {
+  posts {
+    edges {
+      id
+      name
+      categories {
+        id
+        name
+      }
+    }
+  }
+}
