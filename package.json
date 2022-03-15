@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "concurrently \"yarn qcms:start\" \"next dev\"",
+    "dev": "next dev",
     "build": "yarn qcms:generate && next build",
     "start": "concurrently \"yarn qcms:start\" \"next start\"",
     "lint": "next lint",
@@ -16,7 +16,7 @@
     "@emotion/react": "^11",
     "@emotion/styled": "^11",
     "@mvr-studio/protochakra": "^0.1.2",
-    "@mvr-studio/qcms": "^0.0.6",
+    "@mvr-studio/qcms": "^0.1.0",
     "focus-visible": "^5.2.0",
     "framer-motion": "^6",
     "graphql-request": "^4.1.0",

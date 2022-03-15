@@ -1,25 +1,34 @@
-import { Box, Stack } from '@chakra-ui/react'
+import { Box, Skeleton, Stack } from '@chakra-ui/react'
 import type { NextPage } from 'next'
-import { CategoriesBar } from 'components'
-import { Card } from '@mvr-studio/protochakra'
+import { CategoriesBar, PostCard } from 'components'
 import QUERY_POSTS from 'gql/QUERY_POSTS.gql'
 import gqlFetcher from 'utils/gqlFetcher'
 import useSWR from 'swr'
 import { ApiTypes } from 'types'
 
 const Home: NextPage = () => {
-  const { data } = useSWR(QUERY_POSTS, gqlFetcher)
+  const { data, error } = useSWR(QUERY_POSTS, gqlFetcher)
+  const isLoading = !data && !error
   const posts: ApiTypes['Post'][] = data?.posts?.edges
-  console.log(posts)
 
   return (
     <Box>
       <CategoriesBar />
-      <Stack marginTop="1rem">
-        {posts?.map((post) => (
-          <Card key={post.id}>{post.name}</Card>
-        ))}
-      </Stack>
+      {isLoading ? (
+        <Stack marginTop="1rem" gap="1rem">
+          <Skeleton height="4rem" />
+          <Skeleton height="4rem" />
+          <Skeleton height="4rem" />
+        </Stack>
+      ) : (
+        <Stack marginTop="1rem" gap="1rem">
+          {posts?.map((post) => (
+            <PostCard key={post.id} id={post.id} title={post.name || ''} imageUrl={post.imageUrl || ''}>
+              {post.content}
+            </PostCard>
+          ))}
+        </Stack>
+      )}
     </Box>
   )
 }

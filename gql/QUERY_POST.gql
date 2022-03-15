@@ -1,0 +1,7 @@
+query Post($id: String!) {
+  postById(id: $id) {
+    name
+    content
+    imageUrl
+  }
+}

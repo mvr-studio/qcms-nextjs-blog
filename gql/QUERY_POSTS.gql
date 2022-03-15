@@ -3,6 +3,8 @@ query Posts {
     edges {
       id
       name
+      content
+      imageUrl
       categories {
         id
         name

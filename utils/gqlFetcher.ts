@@ -1,6 +1,6 @@
 import { GraphQLClient } from 'graphql-request'
 
-const graphQLClient = new GraphQLClient('http://localhost:3050/graphql', {
+const graphQLClient = new GraphQLClient(process.env.NEXT_PUBLIC_API_URL || '', {
   credentials: 'include',
   mode: 'cors'
 })

@@ -2228,10 +2228,10 @@
     typescript "^4.1.2"
     web-vitals "^1.0.1"
 
-"@mvr-studio/qcms@^0.0.6":
-  version "0.0.6"
-  resolved "https://registry.yarnpkg.com/@mvr-studio/qcms/-/qcms-0.0.6.tgz#05ca76417b59458c342d751cf800779aa49c3842"
-  integrity sha512-5/hWYHNWca9AM5eFeVE7aepXlhLBmiDPZdvu8VRFjZRf8dBhspr4cN+Zks0/gmqmb92SIZ913UzWxRem9VLASg==
+"@mvr-studio/qcms@^0.1.0":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@mvr-studio/qcms/-/qcms-0.1.0.tgz#af16bb10983899b984ed2f88eef59f39baf0c993"
+  integrity sha512-LUqxcLTOBLWEl3x4ZVqL5iVyU4BQ3M2mzStRY5OGUQKKksz3AjZGc24knmtCK+YE/SYuHSPM4X3IhrjrKRDX7Q==
   dependencies:
     "@prisma/client" "^3.10.0"
     "@vercel/node" "^1.13.0"

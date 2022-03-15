@@ -4,6 +4,7 @@ import useSWR from 'swr'
 import QUERY_ME from 'gql/QUERY_ME.gql'
 import gqlFetcher from 'utils/gqlFetcher'
 import { useRouter } from 'next/router'
+import { FiFile, FiList } from 'react-icons/fi'
 
 interface AdminLayoutProps {
   children: React.ReactNode
@@ -24,12 +25,8 @@ const AdminLayout = ({ children }: AdminLayoutProps) => {
   return (
     <Stack>
       <HStack>
-        <Button>Posts</Button>
-        <Button>Categories</Button>
-        <Box flex={1} />
-        <Button variant="ghost" leftIcon={<Avatar name={user?.name} size="sm" />} size="sm">
-          {user?.name}
-        </Button>
+        <Button leftIcon={<FiFile />}>Posts</Button>
+        <Button leftIcon={<FiList />}>Categories</Button>
       </HStack>
       <Box>{children}</Box>
     </Stack>
