@@ -1,6 +1,6 @@
 import { Box, Stack } from '@chakra-ui/react'
 import type { NextPage } from 'next'
-import CategoriesBar from '../components/CategoriesBar'
+import { CategoriesBar } from 'components'
 import { Card } from '@mvr-studio/protochakra'
 import QUERY_POSTS from 'gql/QUERY_POSTS.gql'
 import gqlFetcher from 'utils/gqlFetcher'

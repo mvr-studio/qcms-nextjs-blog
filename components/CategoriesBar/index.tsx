@@ -11,7 +11,9 @@ const CategoriesBar = () => {
   return (
     <HStack>
       {categories?.map((category) => (
-        <Button key={category.id}>{category.name}</Button>
+        <Button key={category.id} variant="outline">
+          {category.name}
+        </Button>
       ))}
     </HStack>
   )

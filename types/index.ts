@@ -1,3 +1,3 @@
-import { NexusGenObjects } from '@mvr-studio/qcms/dist/schema/generated/nexus'
+import { NexusGenObjects } from '@mvr-studio/qcms/src/schema/generated/nexus'
 
 export type ApiTypes = NexusGenObjects
